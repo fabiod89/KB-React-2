@@ -6,20 +6,24 @@ function App() {
     <div className="main">
 
       {/* Search bar */}
-      <div className = "searchSection">
+      <div className = "search-Section">
         <h3>How can we help you?</h3>
         <input placeholder="Search bar..."></input>
       </div>
 
       {/* List of KB articles */}
-      <div className = "KbList">
-        <h1>List of KBs</h1>
+      <div className = "KbList-Section"> 
+      {data.map( i => (
+          <div className="KbCard">
+            <h5>{i.Title}</h5>
+            <h5>{i.Content}</h5>
+          </div>
+          
+        ))}
       </div>
 
     </div>
   );
 }
-
-console.log(data)
 
 export default App;
